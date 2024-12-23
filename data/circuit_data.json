@@ -1,0 +1,13 @@
+{
+    "_comment": "This file defines the circuit components and connections, So far test data is placed here.",
+
+    "components": [
+        {"id": 1, "type": "resistor", "value": 1000},
+        {"id": 2, "type": "capacitor", "value": 0.1},
+        {"id": 3, "type": "resistor", "value": 2000}
+    ],
+    "connections": [
+        {"from": 1, "to": 2},
+        {"from": 2, "to": 3}
+    ]
+}

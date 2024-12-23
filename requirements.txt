@@ -1,0 +1,19 @@
+# This file defines all the dependencies for the project
+# to use all of these intsall then into the virtual environment then use 'pip install -r requirements.txt' to install all of them at once
+numpy           # Used for numerical operations and array handling
+pandas          # Used for data manipulation and analysis
+sympy           # Used for symbolic mathematics and algebraic operations
+networkx        # Used for the creation, manipulation, and study of complex networks (graphs)
+matplotlib      # Used for plotting and visualizing data in graphs, charts, etc.
+graphviz        # Used for creating and visualizing graph structures
+scikit-learn    # Used for machine learning algorithms, preprocessing, and data mining
+tensorflow      # Used for machine learning and deep learning models (optional for advanced optimization)
+simpy           # Used for discrete event simulation, useful for circuit simulation
+sqlalchemy      # Used for database interaction and ORM (Object Relational Mapping)
+jupyterlab      # Provides an interactive development environment for running Jupyter notebooks
+scipy           # Used for scientific and technical computing, offering advanced mathematical functions
+keras           # High-level API for TensorFlow, simplifies deep learning model building
+pydot           # Interface to Graphviz, useful for creating and manipulating graphs and visualizations
+pyomo           # Used for optimization problems, including linear and non-linear optimization
+pytest          # Used for testing Python code with unit tests
+plotly          # Used for creating interactive, web-based visualizations and graphs
