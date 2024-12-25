@@ -55,7 +55,7 @@ Currently the project is in its first version and it has the following features:
 - **Optimization**: The project can optimize the circuit to reduce component count for resistors i.e . if there are two resistors in series they can be combined into one.
 - **Simulation and Visualization**: The project can simulate the optimized circuit using a test source and get its power usage. Then display the circuit as a graph.
 
-- **Showcase**
+## V1 Showcase
 - Data
 ```json
 {
