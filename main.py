@@ -24,16 +24,12 @@ def main():
     # Parse circuit
     circuit = parse_circuit(circuit_data)
 
-    # Simulate original circuit
-    power = simulate_circuit(circuit)
-    print(f"Initial power consumption: {power} W")
-
     # Optimize circuit
     optimized_circuit = optimize_circuit(circuit)
 
     # Simulate optimized circuit
     optimized_power = simulate_circuit(optimized_circuit)
-    print(f"Optimized power consumption: {optimized_power} W")
+    print(f"Optimized power consumption with a 5V supply: {optimized_power} W")
 
     # Visualize optimized circuit
     visualize_circuit(optimized_circuit)
