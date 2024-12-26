@@ -48,9 +48,40 @@ NeuralNetworkCircuitOptimizer/
 
 The main goal of this project is to optimize small digital circuits by using machine learning techniques, specifically a neural network, to minimize the complexity of circuits. This involves reducing the gate count, power usage, and execution time, improving overall efficiency. The project also serves as a great introduction to applying neural networks in hardware optimization.
 
+## V2 of the project (latest)
+the projects second version takes a complete overhaul, i've decided to move away from the circuit components like resistors, capacitors and inductors and moved on to what was supposed to be the second step which is implementing logic components, its still a circuit with just logic components like logic gates (and gate, or gate etc) but without any resistors, capacitors, power sources etc. This change was made because there was only so much i could do with that, i can combine these components in series or parallel i implemented a that but it got to a point where i was just combining the same components over and over again, so i decided instead to move towards logic components. now i can play around with different components and get new results and there is a a lot more to do with this in the optimization department than there is with the first version.
+
+- **Circuit Creation**: The project can parse the data json file and create a circuit using the components.
+- **Circuit Visualization**: The project can simulate the circuit from the created circuit Then display the circuit as a graph.
+TODO: Simulator
+
+## V2 Showcase
+- Data
+```json
+{
+    "components": [
+        { "type": "AND", "id": "G1" }, # the gates are defined in the logic_functions file
+        { "type": "OR", "id": "G2" },
+        { "type": "NOT", "id": "G3" },
+        { "type": "AND", "id": "G4" }
+    ],
+    "connections": [
+        { "from": "G1", "to": "G2", "id": "G2" },
+        { "from": "G2", "to": "G3", "id": "G3" },
+        { "from": "G3", "to": "G4", "id": "G4" }
+    ],
+    "initial_inputs": {
+        "G1": [1, 0, 1, 1, 0],  
+        "G2": [0, 1, 0, 1]       
+    }
+}
+```
+- Circuit Visualization
+<img src="./assets/v2/logic.jpeg" alt="Home" width="600" height="auto" />
+
 ## V1 of Project! 
 
-Currently the project is in its first version and it has the following features:
+the projects first version and it has the following features:
 - **Circuit Creation**: The project can parse the data json file and create a circuit using the components.
 - **Optimization**: The project can optimize the circuit to reduce component count for resistors i.e . if there are two resistors in series they can be combined into one.
 - **Simulation and Visualization**: The project can simulate the optimized circuit using a test source and get its power usage. Then display the circuit as a graph.
@@ -71,12 +102,12 @@ Currently the project is in its first version and it has the following features:
 }
 ```
 - Circuit Simulation 
-<img src="./assets/power.png" alt="Home" width="600" height="auto" />
+<img src="./assets/v1/power.png" alt="Home" width="600" height="auto" />
 - Circuit Visualization
 Before Optimization
-<img src="./assets/unop.jpeg" alt="Home" width="600" height="auto" />
+<img src="./assets/v1/unop.jpeg" alt="Home" width="600" height="auto" />
 After Optimization
-<img src="./assets/op.jpeg" alt="Home" width="600" height="auto" />
+<img src="./assets/v1/op.jpeg" alt="Home" width="600" height="auto" />
 
 
 

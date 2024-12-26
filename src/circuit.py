@@ -8,6 +8,7 @@ You can add, remove, and manage components within the circuit, and it allows you
 (e.g., which component is connected to which).
 """
 
+
 class Circuit:
     def __init__(self):
         self.components = []  # List of all components in the circuit
@@ -31,3 +32,4 @@ class Circuit:
 
     def __str__(self):
         return f"Circuit with {len(self.components)} components and {len(self.connections)} connections."
+

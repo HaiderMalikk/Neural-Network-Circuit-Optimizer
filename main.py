@@ -12,27 +12,18 @@ Display the results in the terminal or save them to a file.
 """
 
 from src.parser import parse_circuit
-from src.optimizer import optimize_circuit
-from src.simulator import simulate_circuit
 from src.visualizer import visualize_circuit
 import json
 
 def main():
+    # Load the circuit data
     with open('data/circuit_data.json') as f:
         circuit_data = json.load(f)
 
-    # Parse circuit
+    # Parse the circuit
     circuit = parse_circuit(circuit_data)
 
-    # Optimize circuit
-    optimized_circuit = optimize_circuit(circuit)
-
-    # Simulate optimized circuit
-    optimized_power = simulate_circuit(optimized_circuit)
-    print(f"Optimized power consumption with a 5V supply: {optimized_power} W")
-
-    # Visualize optimized circuit
-    visualize_circuit(optimized_circuit)
+    visualize_circuit(circuit)
 
 if __name__ == "__main__":
     main()

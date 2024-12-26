@@ -1,13 +1,17 @@
 {
-    "_comment": "This file defines the circuit components and connections, So far test data is placed here.",
-
     "components": [
-        {"id": 1, "type": "resistor", "value": 300},
-        {"id": 2, "type": "capacitor", "value": 0.1},
-        {"id": 3, "type": "resistor", "value": 200}
+        { "type": "AND", "id": "G1" },
+        { "type": "OR", "id": "G2" },
+        { "type": "NOT", "id": "G3" },
+        { "type": "AND", "id": "G4" }
     ],
     "connections": [
-        {"from": 1, "to": 2},
-        {"from": 2, "to": 3}
-    ]
+        { "from": "G1", "to": "G2", "id": "G2" },
+        { "from": "G2", "to": "G3", "id": "G3" },
+        { "from": "G3", "to": "G4", "id": "G4" }
+    ],
+    "initial_inputs": {
+        "G1": [1, 0, 1, 1, 0],  
+        "G2": [0, 1, 0, 1]       
+    }
 }

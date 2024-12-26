@@ -13,14 +13,14 @@ import matplotlib.pyplot as plt
 def visualize_circuit(circuit):
     G = nx.Graph()
 
-    # Add nodes with labels for each component
+    # Add nodes with labels for each logic gate
     for component in circuit.components:
-        G.add_node(component.id, label=f"{component.component_type} ({component.value} Ohms)")
+        G.add_node(component.id, label=f"{component.component_type} (ID: {component.id})")
 
     # Connect components sequentially
-    for i in range(len(circuit.components) - 1):
-        G.add_edge(circuit.components[i].id, circuit.components[i + 1].id)
-
+    for connection in circuit.connections:
+        G.add_edge(connection[0].id, connection[1].id)
+ 
     # Use a spring layout for positioning
     pos = nx.spring_layout(G, seed=42)
 
@@ -33,6 +33,6 @@ def visualize_circuit(circuit):
     )
 
     # Add title and show the plot
-    plt.title("Circuit Visualization - Optimized", fontsize=14)
+    plt.title("Logic Gate Circuit Visualization", fontsize=14)
     plt.axis("off")
     plt.show()
