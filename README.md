@@ -17,6 +17,7 @@ A Circuit here can have Components like resistors, capacitors, logic gates, and 
 - **SQLAlchemy**: Manages database interactions for storing circuit data and optimization results.
 - **Scikit-learn**: Implements machine learning algorithms for optimization tasks.
 - **JupyterNotebook/Labs**: Provides an interactive environment for development, testing, and visualization.
+- **Pytest**: Used for unit testing and ensuring code quality.
 
 ## Project Structure
 
