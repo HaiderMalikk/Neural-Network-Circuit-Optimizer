@@ -28,6 +28,7 @@ NeuralNetworkCircuitOptimizer/
 ├── src/                 # Core Python modules for parsing, optimization, simulation, and visualization
 │   ├── circuit.py       # Optimizes the circuit using ML algorithms
 │   ├── component.py     # Creates the circuit components and adds connections between them
+│   ├── logic_func.py    # Holds the definition (i.e the logic) for all the logic gates in to cicuit, giving outputs for there inputs
 │   ├── optimizer.py     # Optimizes the circuit using simple formulas and algorithms to advanced ML algorithms
 │   ├── parser.py        # Parses circuit data (JSON format)
 │   ├── simulator.py     # Simulates the circuit behavior using test cases
