@@ -13,19 +13,10 @@ from .circuit import Circuit
 
 def parse_circuit(json_data):
     circuit = Circuit()
+    for comp in json_data['components']:
+        circuit.add_component(Component(comp['type'], comp['id']))
     
-    # Parse components (logic gates)
-    for component_data in json_data['components']:
-        component = Component(
-            component_data['type'],  # Logic gate type (AND, OR, etc.)
-            component_data['id']
-        )
-        circuit.add_component(component)
-
-    # Parse connections
-    for connection in json_data['connections']:
-        component1 = circuit.get_component_by_id(connection['from'])
-        component2 = circuit.get_component_by_id(connection['to'])
-        circuit.connect_components(component1, component2)
-
+    for conn in json_data['connections']:
+        circuit.connect_components(conn['from'], conn['to'])
+    
     return circuit

@@ -6,22 +6,32 @@ Tasks:
 Visualize Circuit: Create visual representations (e.g., graphs or diagrams) to help understand the circuit's layout and connections.
 Visualize Optimization: Show before-and-after views of the circuit to demonstrate how optimization has improved it.
 """
-
 import networkx as nx
 import matplotlib.pyplot as plt
+import json
 
 def visualize_circuit(circuit):
-    G = nx.Graph()
-
-    # Add nodes with labels for each logic gate
+    G = nx.DiGraph()  # Use directed graph for logic flow
+    with open('data/circuit_data.json') as f:
+        circuit_data = json.load(f)
+    # Check if components are stored as strings or objects
     for component in circuit.components:
-        G.add_node(component.id, label=f"{component.component_type} (ID: {component.id})")
+        if isinstance(component, str):
+            # for component in circuit.components:
+            #     componentname = None
+            #     for component in circuit_data['components']:
+            #         if component['id'] == component:
+            #             componentname = component['type']
+            #             break
+            G.add_node(component, label=component)  # If component is a string, use it as an ID
+        else:
+            G.add_node(component.id, label=f"{component.component_type} (ID: {component.id})")
 
-    # Connect components sequentially
+    # Add edges based on connections
     for connection in circuit.connections:
-        G.add_edge(connection[0].id, connection[1].id)
- 
-    # Use a spring layout for positioning
+         G.add_edge(connection[0], connection[1])  # Access tuple elements by index
+
+    # Use a spring layout for visualization
     pos = nx.spring_layout(G, seed=42)
 
     # Draw the graph
@@ -32,7 +42,7 @@ def visualize_circuit(circuit):
         G, pos, labels=nx.get_node_attributes(G, "label"), font_size=10, font_color="black"
     )
 
-    # Add title and show the plot
+    # Add title and display the graph
     plt.title("Logic Gate Circuit Visualization", fontsize=14)
     plt.axis("off")
     plt.show()

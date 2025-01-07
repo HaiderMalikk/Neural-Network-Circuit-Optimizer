@@ -12,3 +12,10 @@ Replace certain components with more efficient ones.
 Re-route connections to reduce resistance or improve performance.
 Use algorithms like greedy algorithms, simulated annealing, or genetic algorithms for optimization.
 """
+
+
+# Do ex optimization EX :
+""" 
+if inputs to a component that nto a 'not' gate ahs 1 input then replace it with a wire
+as a OR gate for ex that has 1 input is a wire
+"""

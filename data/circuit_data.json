@@ -1,17 +1,22 @@
 {
     "components": [
-        { "type": "AND", "id": "G1" },
-        { "type": "OR", "id": "G2" },
-        { "type": "NOT", "id": "G3" },
-        { "type": "AND", "id": "G4" }
+        { "type": "NOT", "id": "G1" },
+        { "type": "NOT", "id": "G2" },
+        { "type": "AND", "id": "G3" },
+        { "type": "NOT", "id": "G4" },
+        { "type": "OR", "id": "G5" },
+        { "type": "OUTPUT", "id": "OUT" }  
     ],
     "connections": [
-        { "from": "G1", "to": "G2", "id": "G2" },
-        { "from": "G2", "to": "G3", "id": "G3" },
-        { "from": "G3", "to": "G4", "id": "G4" }
+        { "from": "G1", "to": "G3" },
+        { "from": "G2", "to": "G3" },
+        { "from": "G3", "to": "G4" },
+        { "from": "G4", "to": "G5" },
+        { "from": "G3", "to": "G5" },
+        { "from": "G5", "to": "OUT" } 
     ],
     "initial_inputs": {
-        "G1": [1, 0, 1, 1, 0],  
-        "G2": [0, 1, 0, 1]       
+        "G1": [0],
+        "G2": [0]
     }
 }
