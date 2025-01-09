@@ -12,6 +12,7 @@
         { "from": "G2", "to": "G3" },
         { "from": "G3", "to": "G4" },
         { "from": "G4", "to": "G5" },
+        { "from": "G4", "to": "OUT" },
         { "from": "G3", "to": "G5" },
         { "from": "G5", "to": "OUT" } 
     ],
