@@ -15,15 +15,14 @@ def visualize_circuit(circuit):
     with open('data/circuit_data.json') as f:
         circuit_data = json.load(f)
     # Check if components are stored as strings or objects
+    
     for component in circuit.components:
         if isinstance(component, str):
-            # for component in circuit.components:
-            #     componentname = None
-            #     for component in circuit_data['components']:
-            #         if component['id'] == component:
-            #             componentname = component['type']
-            #             break
-            G.add_node(component, label=component)  # If component is a string, use it as an ID
+            componentname = None
+            for c in circuit_data['components']:
+                if c['id'] == component:
+                    componentname = c['type']
+            G.add_node(component, label=componentname + "ON")  # If component is a string, use it as an ID
         else:
             G.add_node(component.id, label=f"{component.component_type} (ID: {component.id})")
 
