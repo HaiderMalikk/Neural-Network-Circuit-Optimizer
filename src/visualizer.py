@@ -50,10 +50,10 @@ def visualize_circuit(circuit, inputs, outputs):
     edge_colors = [G.nodes[edge[0]]["color"] for edge in G.edges]
     nx.draw_networkx_edges(G, pos, width=2, edge_color=edge_colors, alpha=1.0, arrowstyle="-|>", arrowsize=10, min_target_margin=30, min_source_margin=30)
     nx.draw_networkx_labels(
-        G, pos, labels=nx.get_node_attributes(G, "label"), font_size=7, font_color="black"
+        G, pos, labels=nx.get_node_attributes(G, "label"), font_size=7, font_color="black", font_weight="bold"
     )
     # Add title and display the graph
-    plt.title("Logic Gate Circuit Visualization", fontsize=14, pad=30)
-    plt.text(0.5, 1, "Inputs: " + str(inputs) + "\nOutputs: " + str(outputs), ha="center", va="center", fontsize=8, transform=plt.gca().transAxes)
+    plt.title("Logic Gate Circuit Visualization", fontsize=14, fontdict={"fontweight": "bold"},pad=30)
+    plt.text(0.5, 1, "Inputs: " + str(inputs) + "\nOutputs: " + str(outputs), ha="center", va="center", fontsize=8, fontdict={"fontweight": "bold"}, transform=plt.gca().transAxes)
     plt.axis("off") 
     plt.show()
