@@ -1,9 +1,9 @@
 # Neural Network Circuit Optimizer 
 
-The **Neural Network Circuit Optimizer** project aims to optimize simple digital circuits using machine learning, circuit simulation, and optimization algorithms. This tool leverages a neural network to improve circuit efficiency by minimizing component count, power consumption, and execution time.
+The **Neural Network Circuit Optimizer** project aims to optimize simple **digital circuits** using **machine learning**, **circuit simulation**, and **optimization algorithms**. This tool leverages a **neural network** to improve circuit efficiency by minimizing component count meaning it reduces the number of components in a digital circuit while maintaining its functionality. This can lead to smaller, faster, and more energy-efficient designs.
 
 - **NOTE**: By Circuit i mean a digital circuit, this contains logic gates like AND, OR, NOT, etc. NOT resistors or capacitors etc.
-
+- **NOTE**: This project uses my own custom made digital circuit simulator.
 - **NOTE**: This project is under development please see the bottom of the page for the current version and progress.
 
 ## Technologies and Algorithms
