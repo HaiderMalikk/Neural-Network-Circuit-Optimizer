@@ -10,8 +10,11 @@ matplotlib      # Used for plotting and visualizing data in graphs, charts, etc.
 graphviz        # Used for creating and visualizing graph structures
 scikit-learn    # Used for machine learning algorithms, preprocessing, and data mining
 tensorflow       # Used for machine learning and deep learning models (optional for advanced optimization)
+tensorflow-macos # TensorFlow version optimized for macOS.
+tensorflow-metal # Enables GPU acceleration via Apple's Metal API.
 simpy           # Used for discrete event simulation, useful for circuit simulation
 sqlalchemy      # Used for database interaction and ORM (Object Relational Mapping)
+jupyter-notebook# Provides an interactive development environment for running Jupyter notebooks (optional) if you have vs code you can use it's jupyter notebook extension
 jupyterlab      # Provides an interactive development environment for running Jupyter notebooks
 scipy           # Used for scientific and technical computing, offering advanced mathematical functions
 keras           # High-level API for TensorFlow, simplifies deep learning model building

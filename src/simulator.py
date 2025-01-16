@@ -1,4 +1,3 @@
-# redo
 # simulator.py
 from src.circuit import Circuit
 

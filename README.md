@@ -12,12 +12,12 @@ The **Neural Network Circuit Optimizer** project aims to optimize simple **digit
 - **SymPy**: Helps simplify Boolean logic expressions for circuit optimization.
 - **NetworkX**: Represents circuits as graphs, making it easier to analyze and optimize them.
 - **Matplotlib**: Visualizes circuit optimizations and results.
-- **SimPy**: Simulates circuit behavior for testing and analysis.
 - **TensorFlow/PyTorch**: Used to train a neural network for advanced optimization of circuits.
 - **SQLAlchemy**: Manages database interactions for storing circuit data and optimization results.
 - **Scikit-learn**: Implements machine learning algorithms for optimization tasks.
 - **JupyterNotebook/Labs**: Provides an interactive environment for development, testing, and visualization.
 - **Pytest**: Used for unit testing and ensuring code quality.
+- **pytourch**: Used for training the neural network and making test LLMS with custom data sets.
 
 ## Project Structure
 
