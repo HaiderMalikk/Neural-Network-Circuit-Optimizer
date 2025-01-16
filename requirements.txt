@@ -1,5 +1,7 @@
 # This file defines all the dependencies for the project
 # to use all of these intsall then into the virtual environment then use 'pip install -r requirements.txt' to install all of them at once
+# if using conda do conda create -n envname pythonversion then if you want do conda env list to see all env's then do conda activate envname to activate it and conda deactivate to deactivate it
+# if using python venv do python -m venv envname then do source envname/bin/activate to activate and deactivate to deactivate
 numpy           # Used for numerical operations and array handling
 pandas          # Used for data manipulation and analysis
 sympy           # Used for symbolic mathematics and algebraic operations
@@ -7,7 +9,7 @@ networkx        # Used for the creation, manipulation, and study of complex netw
 matplotlib      # Used for plotting and visualizing data in graphs, charts, etc.
 graphviz        # Used for creating and visualizing graph structures
 scikit-learn    # Used for machine learning algorithms, preprocessing, and data mining
-tensorflow      # Used for machine learning and deep learning models (optional for advanced optimization)
+tensorflow       # Used for machine learning and deep learning models (optional for advanced optimization)
 simpy           # Used for discrete event simulation, useful for circuit simulation
 sqlalchemy      # Used for database interaction and ORM (Object Relational Mapping)
 jupyterlab      # Provides an interactive development environment for running Jupyter notebooks
@@ -17,3 +19,8 @@ pydot           # Interface to Graphviz, useful for creating and manipulating gr
 pyomo           # Used for optimization problems, including linear and non-linear optimization
 pytest          # Used for testing Python code with unit tests
 plotly          # Used for creating interactive, web-based visualizations and graphs
+torch           # pytorch for deep learning
+# next three are provided by huggingface
+transformers    # Pre-built models and utilities. including NLP models like BERT, GPT-2, etc.
+datasets        # Get a dataset for training. and for working with large NLP datasets
+tokenizers      # tokenizing text for the model. for converting text into model-friendly format
