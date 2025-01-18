@@ -12,7 +12,8 @@ AND 0   1   0
 OR  1   0   1 
 NOT 0   1   0 
 - here a 1 represents an edge (a connection between two gates), and a 0 represents no connection.
- */
+// here is a program in C++ to represent a circuit as an undirected graph using an adjacency matrix.
+*/
 
 class CircuitGraph {
 public:

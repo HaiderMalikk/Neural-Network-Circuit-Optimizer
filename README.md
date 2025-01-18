@@ -12,7 +12,7 @@ The **Neural Network Circuit Optimizer** project aims to optimize simple **digit
 - **SymPy**: Helps simplify Boolean logic expressions for circuit optimization.
 - **NetworkX**: Represents circuits as graphs, making it easier to analyze and optimize them.
 - **Matplotlib**: Visualizes circuit optimizations and results.
-- **TensorFlow/PyTorch**: Used to train a neural network for advanced optimization of circuits.
+- **TensorFlow/PyTorch**: Used to train a neural network/LLM for advanced optimization of circuits.
 - **SQLAlchemy**: Manages database interactions for storing circuit data and optimization results.
 - **Scikit-learn**: Implements machine learning algorithms for optimization tasks.
 - **JupyterNotebook/Labs**: Provides an interactive environment for development, testing, and visualization.
@@ -24,19 +24,23 @@ The **Neural Network Circuit Optimizer** project aims to optimize simple **digit
 ```
 NeuralNetworkCircuitOptimizer/
 │
-├── data/                # Contains input circuits and testing data (JSON files)
-├── notebooks/           # Jupyter notebooks for experimentation with algorithms
-├── src/                 # Core Python modules for parsing, optimization, simulation, and visualization
-│   ├── circuit.py       # Optimizes the circuit using ML algorithms
-│   ├── component.py     # Creates the circuit components and adds connections between them
-│   ├── logic_func.py    # Holds the definition (i.e the logic) for all the logic gates in to circuit, giving outputs for there inputs
-│   ├── optimizer.py     # Optimizes the circuit using simple formulas and algorithms to advanced ML algorithms
-│   ├── parser.py        # Parses circuit data (JSON format)
-│   ├── simulator.py     # Simulates the circuit behavior using test cases
-│   └── visualizer.py    # Visualizes the optimization process and results (displays the circuit as a graph)
-├── tests/               # Unit tests for ensuring correctness
-├── requirements.txt     # Lists project dependencies
-└── main.py              # Main entry point to run the program
+├── data/                    # Contains input circuits and testing data (JSON files)
+├── notebooks/               # Jupyter notebooks for experimentation with algorithms (ipynb)
+│   ├── pytorch_tests        # tests for pytorch using custom data to build a mini LLM
+│   ├── scikitlearn_tests    # tests for scikit learn for testing data accuracy  
+│   └── tensorflow_tests      # tests for tesnsorflow for testing neural networks 
+├── src/                     # Core Python modules for parsing, optimization, simulation, and visualization + cpp files for the graph
+│   ├── circuit.py           # Optimizes the circuit using ML algorithms
+│   ├── component.py         # Creates the circuit components and adds connections between them
+│   ├── logic_func.py        # Holds the definition (i.e the logic) for all the logic gates in to circuit, giving outputs for there inputs
+│   ├── optimizer.py         # Optimizes the circuit using simple formulas and algorithms to advanced ML algorithms
+│   ├── parser.py            # Parses circuit data (JSON format)
+│   ├── simulator.py         # Simulates the circuit behavior using test cases
+│   ├── visualizer.py        # Visualizes the optimization process and results (displays the circuit as a graph)
+│   └── graph.cpp            # cpp file with a test graph to repersent the circuit
+├── tests/                   # pytest Unit tests for ensuring correctness
+├── requirements.txt         # Lists project dependencies
+└── main.py                  # Main entry point to run the program
 ```
 
 ## Project Details
