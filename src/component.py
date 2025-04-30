@@ -7,7 +7,6 @@ Define Component Class: Each component (resistor, capacitor, etc.) will be an in
 Define Properties: Each component will have properties like type, value, and id.
 """
 # component.py
-# component.py
 inputdict = {}
 class Component:
     def __init__(self, component_type, id):  
